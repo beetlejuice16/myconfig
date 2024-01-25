@@ -3,6 +3,7 @@ return {
     priority = 1000,
     config = function()
         local opts = {
+            style = "night",
             transparent = true,
             styles = {
                 sidebars = "transparent",

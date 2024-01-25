@@ -12,9 +12,9 @@ general {
 }
 
 # order += "ipv6"
-order += "wireless _first_"
+# order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
+# order += "battery all"
 order += "disk /"
 order += "cpu_usage"
 order += "memory"
@@ -27,16 +27,13 @@ wireless _first_ {
 
 ethernet _first_ {
         format_up = "E: %ip (%speed)"
-        format_down = ""
-}
-
-battery all {
-        format = "%status %percentage %remaining"
+        format_down = "E: down"
 }
 
 disk "/" {
         format = "%percentage_used used, %avail available"
 }
+
 
 cpu_usage {
         format = "CPU: %usage"
@@ -50,4 +47,8 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
 }
