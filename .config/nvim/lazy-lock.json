@@ -1,6 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
-  "LuaSnip": { "branch": "master", "commit": "82108e7e31cc6fc223cc5df5cae6d89f70bb199f" },
+  "LuaSnip": { "branch": "master", "commit": "2dbef19461198630b3d7c39f414d09fb07d1fdd2" },
   "NeoZoom.lua": { "branch": "main", "commit": "1289b900bd478fd135dcc0faf4a43b3cf7524097" },
   "chezmoi.nvim": { "branch": "main", "commit": "63a342eacec6ff16fb41590c0ef077114ac34fb2" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
