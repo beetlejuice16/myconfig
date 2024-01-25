@@ -24,7 +24,8 @@ font pango:monospace 9
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-bindsym $mod+Shift+p exec loginctl lock-session
+bindsym $mod+Shift+p exec i3lock
+# bindsym $mod+Shift+p exec loginctl lock-session
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -32,13 +33,10 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-# brightness modification
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -50,7 +48,7 @@ bindsym $mod+Return exec flatpak run org.wezfurlong.wezterm
 # start favorite programs
 bindsym $mod+c exec code
 bindsym $mod+b exec brave-browser --password-store=gnome
-bindsym $mod+o exec flatpak run md.obsidian.Obsidian
+bindsym $mod+o exec obsidian
 
 # move workspaces between monitors
 bindsym $mod+Shift+greater move workspace to output right
@@ -201,27 +199,22 @@ bar {
 }
 
 # Assigning applications to workspaces
-# assign [class="Code"] workspace number $ws1
-# assign [class="Brave-browser"] workspace number $ws2
-assign [class="obsidian"] workspace number $ws3
-# assign [class="wezterm"] workspace number $ws4
+assign [class="obsidian"] workspace number $ws4
 assign [class="discord"] workspace number $ws9
 assign [class="gnome-control-center"] workspace number $ws10
+assign [class="org.cryptomator.launcher.Cryptomator$MainApp"] workspace number $ws10
 
 # Launch at start
-exec_always --no-startup-id autorandr -c 
-
+exec_always --no-startup-id xrandr --output HDMI-0 --left-of DP-0 
 # Rotate left screen to portrait
-exec_always --no-startup-id feh --bg-scale ~/Pictures/backiee-226054-landscape.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/background.jpg
 exec_always --no-startup-id ~/.cargo/bin/i3wsr
 exec_always --no-startup-id picom --config ~/.config/picom.conf 
-
-exec --no-startup-id filen
-exec --no-startup-id insync start
-# exec_always --no-startup-id $HOME/polybar-collection/launch.sh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id volumeicon -d hw:0
 exec --no-startup-id volumeicon -d hw:1
+exec --no-startup-id filen
+exec --no-startup-id insync start
 # i3-gaps
 for_window [class=".*"] border pixel 0
 gaps inner 6
