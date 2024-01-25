@@ -20,6 +20,10 @@ return {
                 path = "/home/fayezb/.local/share/Cryptomator/mnt/My GDrive Vault/Central Perk",
             },
         },
+        daily_notes = {
+            folder = "00 Zettelkasten-Metainfo/Daily_Notes",
+            template = "00 Zettelkasten-Metainfo/_Templates/Daily.md"
+        }
 
     },
 }

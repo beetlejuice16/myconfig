@@ -17,10 +17,10 @@ return {
             winopts = {
                 offset = {
                     -- NOTE: omit `top`/`left` to center the floating window vertically/horizontally.
-                    -- top = 0,
+                    top = 0,
                     -- left = 0.17,
-                    width = 90,
-                    height = 0.9,
+                    width = 95,
+                    height = 0.92,
                 },
                 -- NOTE: check :help nvim_open_win() for possible border values.
                 border = 'thicc', -- this is a preset, try it :)

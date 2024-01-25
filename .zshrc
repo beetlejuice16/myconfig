@@ -172,7 +172,7 @@ fi
 unset __mamba_setup
 # <<< mamba initialize <<<
 
-source ./.custom_bash_commands
+source ~/.custom_bash_commands
 
 LFCD="$GOPATH/src/github.com/gokcehan/lf/etc/lfcd.sh"  # source
 LFCD="/home/fayezb/.config/lf/lfcd.sh" #  pre-built binary, make sure to use absolute path
