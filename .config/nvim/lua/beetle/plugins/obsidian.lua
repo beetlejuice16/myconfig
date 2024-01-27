@@ -17,7 +17,7 @@ return {
         workspaces = {
             {
                 name = "personal",
-                path = "/home/fayezb/.local/share/Cryptomator/mnt/My GDrive Vault/Central Perk",
+                path = "~/cryptomator/Central_Perk",
             },
         },
         daily_notes = {
