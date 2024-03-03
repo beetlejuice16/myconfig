@@ -216,9 +216,9 @@ exec --no-startup-id volumeicon -d hw:1
 exec --no-startup-id filen
 exec --no-startup-id insync start
 # i3-gaps
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 3
 gaps inner 6
-gaps outer 1
+gaps outer 3
 smart_gaps on
 
 # i3-status
