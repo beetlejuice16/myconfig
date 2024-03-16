@@ -13,9 +13,6 @@ return {
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
-    init = function()
-        vim.opt.conceallevel = 1
-    end,
     completion = {
         -- Set to false to disable completion.
         nvim_cmp = true,
@@ -23,16 +20,29 @@ return {
         min_chars = 0,
     },
     opts = {
+{% if yadm.class == "work" %}
         workspaces = {
             {
-                name = "regnology",
+                name = "Work",
                 path = "~/regnology",
             },
         },
         daily_notes = {
             folder = "Daily",
-            -- template = "00 Zettelkasten-Metainfo/_Templates/Daily.md"
         },
+{% else %}
+        workspaces = {
+            {
+                name = "Central_Perk",
+                path = "~/vaults/Central_Perk",
+            },
+        },
+        daily_notes = {
+            folder = "00 Zettelkasten-Metainfo/Daily_Notes",
+            template = "00 Zettelkasten-Metainfo/_Templates/Daily.md"
+        },
+
+{% endif %}
         -- Optional, boolean or a function that takes a filename and returns a boolean.
         -- `true` indicates that you don't want obsidian.nvim to manage frontmatter.
         disable_frontmatter = true,
