@@ -221,3 +221,5 @@ gaps outer 3
 smart_gaps on
 
 # i3-status
+for_window [class=".*"] title_format "<b>%title</b>"
+
