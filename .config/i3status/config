@@ -51,4 +51,5 @@ tztime local {
 
 battery all {
         format = "%status %percentage %remaining"
+        format_down = ""
 }
