@@ -155,7 +155,7 @@ bindsym $mod+Shift+"bracketleft" move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-# bindsym $mod+Shift+s reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -197,7 +197,7 @@ bar {
 }
 
 # Assigning applications to workspaces
-assign [class="obsidian"] workspace number $ws3
+assign [class="obsidian"] workspace number $ws5
 assign [class="discord"] workspace number $ws9
 assign [class="gnome-control-center"] workspace number $ws10
 

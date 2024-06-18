@@ -1,6 +1,6 @@
 return {
     "folke/zen-mode.nvim",
-    -- copies the defaults to be able to see them
+    -- copied the defaults to be able to see them
     opts = {
         {
             window = {

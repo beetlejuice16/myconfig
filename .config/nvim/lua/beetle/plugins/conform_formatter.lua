@@ -6,7 +6,7 @@ return {
         {
             "<leader>ff",
             function()
-                require("conform").format({ aync = true, lsp_fallback = true })
+                require("conform").format({ async = true, lsp_fallback = true })
             end,
             mode = "",
             desc = "Format buffer"
@@ -15,7 +15,9 @@ return {
     opts = {
         formatters_by_ft = {
             lua = { "stylua" },
-            python = { "isort", "black" }
+            python = { "isort", "black" },
+            html = { "prettier" },
+            css = { "prettier" }
         },
         -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
 
