@@ -1,1 +1,0 @@
-../../../../yadm/alt/.config/nvim/lua/beetle/plugins/nvim-metals.lua##class.work
