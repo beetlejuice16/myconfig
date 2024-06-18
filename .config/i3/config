@@ -46,7 +46,6 @@ floating_modifier $mod
 bindsym $mod+Return exec wezterm
 
 # start favorite programs
-bindsym $mod+c exec code
 bindsym $mod+b exec brave-browser --password-store=gnome
 
 # move workspaces between monitors
@@ -95,7 +94,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+g split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Shift+s split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -132,10 +131,10 @@ set $ws9 "9:"
 set $ws10 "10:"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
+bindsym $mod+z workspace number $ws1
+bindsym $mod+x workspace number $ws2
+bindsym $mod+c workspace number $ws3
+bindsym $mod+v workspace number $ws4
 bindsym $mod+u workspace number $ws5
 bindsym $mod+i workspace number $ws6
 bindsym $mod+o workspace number $ws7
@@ -144,10 +143,10 @@ bindsym $mod+"bracketleft" workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+z move container to workspace number $ws1
+bindsym $mod+Shift+x move container to workspace number $ws2
+bindsym $mod+Shift+c move container to workspace number $ws3
+bindsym $mod+Shift+v move container to workspace number $ws4
 bindsym $mod+Shift+u move container to workspace number $ws5
 bindsym $mod+Shift+i move container to workspace number $ws6
 bindsym $mod+Shift+o move container to workspace number $ws7
@@ -156,7 +155,7 @@ bindsym $mod+Shift+"bracketleft" move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+s reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
