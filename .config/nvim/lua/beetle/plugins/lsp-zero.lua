@@ -63,6 +63,13 @@ return {
             },
         })
 
+        cmp.setup.filetype({ "sql" }, {
+            sources = {
+                { name = "vim-dadbod-completion" },
+                { name = "buffer" }
+            }
+        }
+        )
         lsp_zero.setup()
     end
 }
