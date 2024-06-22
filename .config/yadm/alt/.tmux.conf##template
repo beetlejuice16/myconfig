@@ -55,9 +55,13 @@ set -g @resurrect-capture-pane-contents 'on'
 bind-key -r f run-shell "tmux neww ~/.tmux-sessionizer.sh"
 
 # bind-key -r i run-shell "tmux neww tmux-cht.sh"
+{% if yadm.class == "work" %}
+bind-key -r W run-shell "~/.tmux-sessionizer.sh ~/work/airflow-spark"
+{% else %}
 bind-key -r G run-shell "~/.tmux-sessionizer.sh ~/git/mazegame"
 bind-key -r O run-shell "~/.tmux-sessionizer.sh ~/cryptomator/Central_Perk"
 bind-key -r N run-shell "~/.tmux-sessionizer.sh ~/.config/nvim"
+{% endif %}
 
 # Start windows and panes at 1, not 0
 set -g base-index 1
