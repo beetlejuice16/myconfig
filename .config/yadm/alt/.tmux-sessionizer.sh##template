@@ -4,7 +4,7 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
 {% if yadm.class == "work" %}
-    selected=$(find ~/ ~/work ~/projects ~/work/bare ~/work/bare/airflow-spark.git -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/ ~/code ~/regnology ~/work ~/projects ~/work/bare -mindepth 1 -maxdepth 1 -type d | fzf)
 {% else %}
     selected=$(find ~/git ~/code ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
 {% endif %}
