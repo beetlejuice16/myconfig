@@ -57,6 +57,7 @@ bind-key -r f run-shell "tmux neww ~/.tmux-sessionizer.sh"
 # bind-key -r i run-shell "tmux neww tmux-cht.sh"
 {% if yadm.class == "work" %}
 bind-key -r W run-shell "~/.tmux-sessionizer.sh ~/work/airflow-spark"
+bind-key -r T run-shell "2factor > /dev/null"
 {% else %}
 bind-key -r G run-shell "~/.tmux-sessionizer.sh ~/git/mazegame"
 bind-key -r O run-shell "~/.tmux-sessionizer.sh ~/cryptomator/Central_Perk"
