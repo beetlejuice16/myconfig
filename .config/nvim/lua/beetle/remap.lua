@@ -24,17 +24,17 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- use space+y to yank into system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y", { desc = "Yank into system clipboard" })
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>Y", "\"+Y")
+vim.keymap.set("v", "<leader>y", "\"+y", { desc = "Yank into system clipboard" })
+vim.keymap.set("v", "<leader>Y", "\"+Y", { desc = "Yank into system clipboard" })
 -- same but with delete
 vim.keymap.set("n", "<leader>d", "\"_d", { desc = "Delete into system clipboard" })
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d", { desc = "Delete into system clipboard" })
 
 -- replace the word you are on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Replace the word under the cursor" })
 
 -- make current file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make current file executable" })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod u+x %<CR>", { silent = true, desc = "Make current file executable" })
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
