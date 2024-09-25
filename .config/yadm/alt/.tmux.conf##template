@@ -57,7 +57,8 @@ bind-key -r f run-shell "tmux neww ~/.tmux-sessionizer.sh"
 # bind-key -r i run-shell "tmux neww tmux-cht.sh"
 {% if yadm.class == "work" %}
 bind-key -r W run-shell "~/.tmux-sessionizer.sh ~/work/airflow-spark"
-bind-key -r T run-shell "2factor > /dev/null"
+bind-key -r L run-shell "~/.tmux-sessionizer.sh ~/work/local-setup-forked"
+bind-key -r T run-shell "~/2factor.sh > /dev/null"
 bind-key -r q new-session -A -s dev-server ssh dev ';' set-option default-command "ssh dev"
 {% else %}
 bind-key -r G run-shell "~/.tmux-sessionizer.sh ~/git/mazegame"
