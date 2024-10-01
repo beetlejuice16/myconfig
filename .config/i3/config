@@ -54,7 +54,7 @@ bindsym $mod+Shift+less move workspace to output left
 
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
