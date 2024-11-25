@@ -32,8 +32,8 @@ return {
         return '%2l:%-2v'
       end
 
-      local diff = require("mini.diff")
-      diff.setup({ source = diff.gen_source.save() })
+      local diff = require 'mini.diff'
+      diff.setup { source = diff.gen_source.save() }
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
