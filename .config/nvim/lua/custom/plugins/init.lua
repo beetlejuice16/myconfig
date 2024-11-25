@@ -3,7 +3,5 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-    'christoomey/vim-tmux-navigator',
-    -- for working with the neovim dotfiles
-    { "folke/neodev.nvim",       opts = {},             priority = 999 },
+  'christoomey/vim-tmux-navigator',
 }
