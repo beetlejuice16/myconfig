@@ -194,6 +194,17 @@ return {
             },
           },
         },
+        tinymist = {
+          single_file_support = true,
+          root_dir = function()
+            return vim.fn.getcwd()
+          end,
+          settings = {
+            exportPdf = 'onSave',
+            outputPath = '$root/target/$dir/$name',
+            formatterMode = 'typstyle',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -210,6 +221,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'pyright',
+        'tinymist',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
